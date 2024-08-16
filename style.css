@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: rgba(18, 18, 18, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-list li {
+    padding: 0 1rem;
+}
+
+.nav-list a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-list a:hover {
+    color: #4CAF50;
+}
+
+.section {
+    min-height: 100vh;
+    width: 100%;
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.section.active {
+    opacity: 1;
+}
+
+.section h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #121212;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+.personality-card {
+    text-align: center;
+    margin-bottom: 3rem;
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.personality-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 4px solid #4CAF50;
+}
+
+/* Add this to your existing CSS file */
+
+.expenditure {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.expenditure h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4CAF50;
+}
+
+.expenditure-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.month-block {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.month-block:hover {
+    transform: translateY(-5px);
+}
+
+.month-block h4 {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.expenditure-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expenditure-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expenditure-details li {
+    margin-bottom: 0.5rem;
+}
+
+.expenditure-details .costs {
+    text-align: right;
+}
+
+.month-block .total {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: right;
+}
+
+.total-expense {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.total-expense h4 {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.total-expense .total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.pay-now {
+    margin-top: 2rem;
+    display: block;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+    max-width: 500px;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        margin-top: 1rem;
+    }
+
+    .section {
+        padding: 8rem 1rem 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 600px) {
+    .expenditure-details {
+        flex-direction: column;
+    }
+
+    .expenditure-details .costs {
+        text-align: left;
+        margin-top: 0.5rem;
+    }
+}
