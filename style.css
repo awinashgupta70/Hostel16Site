@@ -8,6 +8,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #121212;
+    /* background-image: url('img/bg1.jpg'); */
     color: #e0e0e0;
     overflow-x: hidden;
 }
@@ -59,7 +60,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #1e1e1e;
+    /* background-color: #1e1e1e; */
+    background-image: url('img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
